@@ -31,4 +31,4 @@ RUN composer install --no-dev --optimize-autoloader
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Start Nginx and PHP-FPM
-CMD service nginx start && php-fpm
+CMD ["sh", "-c", "nginx -t && service nginx start && php-fpm"]
