@@ -1,7 +1,8 @@
 services:
   - name: maxine-main-api
     type: web
-    env: node
-    buildCommand: "npm run build"
-    startCommand: "npm run dev"
+    env: docker
+    dockerfilePath: Dockerfile
     plan: free
+    buildCommand: "docker build -t my-laravel-app ."
+    startCommand: "docker run -d -p 80:9000 my-laravel-app"
