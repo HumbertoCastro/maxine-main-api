@@ -1,7 +1,7 @@
 services:
   - name: maxine-main-api
     type: web
-    env: php
-    buildCommand: "composer install --no-dev --optimize-autoloader"
-    startCommand: "php artisan serve --host 0.0.0.0 --port 10000"
+    env: node
+    buildCommand: "npm run build"
+    startCommand: "npm run dev"
     plan: free

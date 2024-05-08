@@ -1,8 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "dev": "php artisan serve",
-        "build": "vite build"
+        "dev": "php artisan serve --host 0.0.0.0 --port 10000",
+        "build": "./.render-build.sh"
     },
     "devDependencies": {
         "axios": "^1.1.2",
