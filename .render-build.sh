@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Install required packages
+# Install necessary tools
 apt-get update -y
 apt-get install -y software-properties-common curl unzip
 
