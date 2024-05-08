@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     git \
+    nginx \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install pdo pdo_mysql zip exif pcntl
@@ -26,6 +27,8 @@ COPY . /var/www
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
-CMD ["php-fpm"]
+# Copy the Nginx configuration
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+
+# Start Nginx and PHP-FPM
+CMD service nginx start && php-fpm
