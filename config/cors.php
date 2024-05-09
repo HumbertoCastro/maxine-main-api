@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -19,7 +18,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['http://localhost:3000'], // Replace with specific frontend URL(s)
 
     'allowed_origins_patterns' => [],
 
