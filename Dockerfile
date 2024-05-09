@@ -1,4 +1,3 @@
-@@ -1,32 +1,36 @@
 # Use an official PHP runtime as a parent image
 FROM php:8.1-fpm
 # Install system dependencies and PHP extensions
