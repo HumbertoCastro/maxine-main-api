@@ -29,7 +29,7 @@ class GenerateToken
             //Payload - Content
             $payload = [
                 'email' => $email,
-                'exp' => $issuedAt + 60,
+                'exp' => $issuedAt + 36000,
                 'roles' => $roles,
                 'isAdmin' => $is_admin
             ];
